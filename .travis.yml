@@ -8,6 +8,8 @@ before_script:
   - travis_retry composer install
   - cp .env.example .env
   - php artisan key:generate
+  - npm install
+  - npm run dev
 
 script:
   - vendor/bin/phpunit
